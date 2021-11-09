@@ -1,0 +1,20 @@
+
+
+#rep {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
+
+}
+
+.button {
+    display: grid;
+    width: auto;
+    font-size: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+
