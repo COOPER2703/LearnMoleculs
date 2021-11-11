@@ -93,3 +93,8 @@ button {
     background-color:white;
     border: 2px solid var(--main-blue-clr);
 }
+
+#goodorfalse {
+    display: center;
+    justify-content: center;
+}
