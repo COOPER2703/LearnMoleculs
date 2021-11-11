@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css/style.css">
     <title>Révision</title>
 </head>
 <body onload="changeAnswers(0, false)">
@@ -17,8 +17,8 @@
             </ul>
         </nav>
     </header>
-
-    <section class="container">
+    <section class="quizz" onload="changeAnswers(0, false)">
+        <section class="container">
         <div class="question"><h1 id="questionnaire">Question</h1></div>
         <div>
             <img id="img" class="img" src="">
@@ -32,6 +32,8 @@
         </div>
         <label id="goodorfalse" value=""></label>
     </section>
+    </section>
+    
     
 </body>
 </html>
