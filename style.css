@@ -95,6 +95,8 @@ button {
 }
 
 #goodorfalse {
-    display: center;
+    display: flex;
     justify-content: center;
+    font-family: sans-serif;
+    font-size: 600;
 }
