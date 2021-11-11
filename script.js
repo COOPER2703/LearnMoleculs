@@ -6,6 +6,7 @@ var Acides_amines = new Array("Serotonine", "Beta-alanine", "Histamine", "Glycin
 var answers = new Array;
 var goodanswer;
 var using_tab = Lipides;
+var using_tab_name = "Lipides";
 
 function getRandomInt(tab) {
     return Math.floor(Math.random() * tab.length);
@@ -30,12 +31,15 @@ function changeList(list) {
 
     if (list === 0) {
         using_tab = Glucides;
+        using_tab_name = "Glucides";
     }
     if (list === 1) {
         using_tab = Lipides;
+        using_tab_name = "Lipides";
     }
     if (list === 2) {
         using_tab = Acides_amines;
+        using_tab_name = "Acides amines";
     }
     changeAnswers(0, false)
 }
@@ -44,7 +48,8 @@ function chooseGoodAnswer() {
 
     goodanswer = getRandomInt(answers)
 
-    document.getElementById("img").innerHTML = answers[goodanswer]
+    document.getElementById("img").src = using_tab_name + "/" + answers[goodanswer] + ".png";
+    console.log(using_tab + "/" + answers[goodanswer] + ".png")
 }
 
 
