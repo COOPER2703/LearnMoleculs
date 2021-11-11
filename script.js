@@ -49,7 +49,7 @@ function chooseGoodAnswer() {
     goodanswer = getRandomInt(answers)
 
     document.getElementById("img").src = using_tab_name + "/" + answers[goodanswer] + ".png";
-    console.log(using_tab + "/" + answers[goodanswer] + ".png")
+
 }
 
 
@@ -57,11 +57,11 @@ function verificate(rep) {
 
     if (rep === goodanswer) {
 
-        console.log("Bonne réponse")
+        //Mettre l'animation de bonne réponse ici
 
     } else {
 
-        console.log("Mauvaise réponse")
+       //mettre l'animation de mauvaise réponse ici
 
     }
 
@@ -69,7 +69,7 @@ function verificate(rep) {
 
 function changeAnswers(rep, condition) {
 
-    console.log(goodanswer)
+
 
     if (condition) {
         verificate(rep)
