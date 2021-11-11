@@ -2,33 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Révision</title>
 </head>
-<body onload="changeAnswers()" >
-    <header> 
-        <div id="top-header">                  
-            <nav id="menu">
-                <ul>
-                    <button onclick="changeList(0)" id="lipides"> Lipides </button>
-                    <button onclick="changeList(1)" id="glucides"> Glucides </button>
-                    <button onclick="changeList(2)" id="acide_amine"> Acide Aminé </button>
-                </ul>
-            </nav>
-        </div>
+<body onload="changeAnswers(0, false)">
+    <header>
+        <img class="logo" src="Data/desktop-bg.jpg" alt="logo">             
+        <nav>
+            <ul class="nav_links">
+                <li class="active"><a onclick="changeList(0)">Glucides</a></li>                    
+                <li class="active"><a onclick="changeList(0)">Lipides</a></li>
+                <li class="active"><a onclick="changeList(0)">Acides aminés</a></li>
+            </ul>
+        </nav>
     </header>
-    <h1 id="questionnaire"> </h1>
-        <div id=img>
-            <label id="img" ></label> 
+
+    <section class="container">
+        <div class="question"><h1 id="questionnaire">Question</h1></div>
+        <div >
+            <!-- J'ai changer pour mettre le nom de la molecules car pour l'instant on a pas les images-->
+            <label id="img" class="img">
+         </div>
+
+        <div id=rep class="rep_container">
+            <div><button id="rep1" onclick="changeAnswers(0, true)" class="button"> Reponse 1 </button></div>
+            <div><button id="rep2" onclick="changeAnswers(1, true)" class="button"> Reponse 2 </button></div>
+            <div><button id="rep3" onclick="changeAnswers(2, true)" class="button"> Reponse 3 </button></div> 
+            <div><button id="rep4" onclick="changeAnswers(3, true)" class="button"> Reponse 4 </button></div>
         </div>
-        <div id=rep>
-            <button id="rep1" onclick="changeAnswers(0)" class="button"> Reponse 1 </button> 
-            <button id="rep2" onclick="changeAnswers(1)" class="button"> Reponse 2 </button>
-            <button id="rep3" onclick="changeAnswers(2)" class="button"> Reponse 3 </button> 
-            <button id="rep4" onclick="changeAnswers(3)" class="button"> Reponse 4 </button>
-        </div>
+    </section>
+    
 </body>
 </html>
