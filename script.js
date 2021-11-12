@@ -40,6 +40,11 @@ function changeList(list) {
         using_tab = Acides_amines;
         using_tab_name = "Acides amines";
     }
+    if (list === 3) {
+        using_tab = Acides_amines.concat(Lipides.concat(Glucides));
+        console.log(using_tab)
+        using_tab_name = "Melange";
+    }
     changeAnswers(0, false)
 }
 
