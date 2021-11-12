@@ -6,8 +6,8 @@
 }
 :root {
     --main-dark-clr: #24252A;
-    --main-button-clr:hsla(230, 8%, 15%, .6);
-    --main-blue-clr: rgba(0, 136, 169,1);
+    --main-button-clr:#23242999;
+    --main-blue-clr: hsl(192, 100%, 33%);
 }
 
 body {
