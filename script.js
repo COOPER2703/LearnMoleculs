@@ -1,4 +1,4 @@
-var Lipides = new Array("Acide alpha-linoléique", "Acide arachidonique", "Acide linoléique", "Acide oléique", "Acide palmitique", "Acide stéarique", "Cholestérol", "Glycérol", "GM1 ganglioside", "Isoprene", "Phosphatidylcholine", "Phosphatidylethanolamine", "Phosphatidylglycerol", "Phosphatidylinositol", "Phosphatidylserine", "Sphingosine");
+var Lipides = new Array("Acide alpha-linoleique", "Acide arachidonique", "Acide linoleique", "Acide oleique", "Acide palmitique", "Acide stearique", "Cholesterol", "Glycerol", "GM1 ganglioside", "Isoprene", "Phosphatidylcholine", "Phosphatidylethanolamine", "Phosphatidylglycerol", "Phosphatidylinositol", "Phosphatidylserine", "Sphingosine");
 var Glucides = new Array("Saccharose", "Lactose", "Cellobiose", "Maltose", "Acide pyruvique", "Dihydroxyacetone", "Mannose", "N-acetyl-D-glucosamine", "NANA", "Beta-D-mannopyranose", "Acide beta-D-glucuronique", "Glucose", "Beta-D-glucosamine", "D-glyceraldehyde", "Galactose", "D-fructose", "Alpha-D-glucopyranose", "L-fructose", "Ribose", "2-desoxy-D-ribofuranose", "Alpha-D-fructofuranose", "Beta-D-Ribofuranose", "Beta-D-galactopyranose")
 var Acides_amines = new Array("Serotonine", "Beta-alanine", "Histamine", "Glycine", "Histidine", "Valine", "Alanine", "Leucine", "Isoleucine", "Methionine", "Glutamate", "Aspartate", "Phenylalanine", "Glutamine", "Asparagine", "Serine", "Tyrosine", "Threonine", "Proline", "GABA", "Cysteine", "Lysine", "Arginine", "Tryptophane")
 
@@ -6,6 +6,9 @@ var answers = new Array;
 var goodanswer;
 var using_tab = Lipides;
 var using_tab_name = "Lipides";
+
+var good_rep_counting = 0
+
 
 function getRandomInt(tab) {
     return Math.floor(Math.random() * tab.length);
@@ -42,7 +45,6 @@ function changeList(list) {
     }
     if (list === 3) {
         using_tab = Acides_amines.concat(Lipides.concat(Glucides));
-        console.log(using_tab)
         using_tab_name = "Melange";
     }
     changeAnswers(0, false)
@@ -63,12 +65,13 @@ function verificate(rep) {
 
     if (rep === goodanswer) {
         document.getElementById("rep" + rep.toString()).style.background = "green";
+        repCounting(true)
 
     } else {       
         document.getElementById("rep" + goodanswer.toString()).style.background = "green";
         document.getElementById("rep" + rep.toString()).style.background = "red";
+        repCounting(false)
     }
-
 }
 
 var delayInMilliseconds = 1000; //1 second
@@ -102,3 +105,10 @@ function changeAnswers(rep, condition) {
 
 }
 
+function repCounting(bool) {
+
+    if (bool) {
+       good_rep_counting ++
+    } 
+
+}
