@@ -9,7 +9,7 @@
 </head>
 <body onload="changeAnswers(0, false)">
     <header>
-        <img class="logo" src="Data/icon.png" alt="logo">             
+        <img class="logo" src="Data/logo.svg" alt="logo">             
         <nav>
             <ul class="nav_links">
                 <li class="active"><a onclick="changeList(0)">Glucides</a></li>                    
@@ -21,19 +21,18 @@
     </header>
     <section class="quizz" onload="changeAnswers(0, false)">
         <section class="container">
-        <div class="question"><h1 id="questionnaire">Question</h1></div>
-        <div>
-            <img id="img" class="img" src="">
-         </div>
+            <div class="question"><h1 id="questionnaire">Question</h1></div>
+            <div>
+                <img id="img" class="img">
+            </div>
 
-        <div id=rep class="rep_container">
-            <div><button id="rep0" onclick="changeAnswers(0, true)" class="button"> Reponse 1 </button></div>
-            <div><button id="rep1" onclick="changeAnswers(1, true)" class="button"> Reponse 2 </button></div>
-            <div><button id="rep2" onclick="changeAnswers(2, true)" class="button"> Reponse 3 </button></div> 
-            <div><button id="rep3" onclick="changeAnswers(3, true)" class="button"> Reponse 4 </button></div>
-        </div>
-        <label id="goodorfalse" value=""></label>
-    </section>
+            <div id=rep class="rep_container">
+                <div><button id="rep0" onclick="changeAnswers(0, true)" class="button"> Reponse 1 </button></div>
+                <div><button id="rep1" onclick="changeAnswers(1, true)" class="button"> Reponse 2 </button></div>
+                <div><button id="rep2" onclick="changeAnswers(2, true)" class="button"> Reponse 3 </button></div> 
+                <div><button id="rep3" onclick="changeAnswers(3, true)" class="button"> Reponse 4 </button></div>
+            </div>
+        </section>
     </section>
     
     

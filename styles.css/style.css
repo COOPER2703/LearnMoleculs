@@ -9,10 +9,10 @@
     --main-button-clr:#23242999;
     --main-blue-clr: hsl(192, 100%, 33%);
 }
-
-body {
-    background-color: #F5F5F5
-}
+/* big pictures need to be fix */
+/* body {
+    background-image: url("../Data/bgchimie.jpg");
+} */
 
 
 li, a {
@@ -32,8 +32,8 @@ header {
 .logo {
     margin-right: auto;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
 .nav_links {
@@ -43,7 +43,7 @@ header {
 }
 .nav_links li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 10px 20px;
 }
 
 
