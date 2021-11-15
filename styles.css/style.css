@@ -2,20 +2,18 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: sans-serif;
+    font-family: Poppins,sans-serif;
 }
 :root {
-    --main-dark-clr: #24252A;
-    --main-button-clr:#23242999;
-    --main-blue-clr: hsl(192, 100%, 33%);
+    --main-black-clr: rgb(42,48,58);
+    --main-blue-clr: rgb(23,98,167);
 }
-/* big pictures need to be fix */
-/* body {
-    background-image: url("../Data/bgchimie.jpg");
-} */
 
+body {
+    background-color: var(--main-black-clr);
+}
 
-li, a {
+li, a, h1, button {
    font-weight: 500;
    font-size: 16px;
    color: white;
@@ -23,7 +21,6 @@ li, a {
 }
 
 header {
-    background: var(--main-dark-clr);
     display: flex;
     align-items: center;
     padding: 20px 10%;
@@ -48,15 +45,18 @@ header {
 
 
 /* il manque le focus pour la navbar */
-.nav_links li a:focus {
-    color: var(--main-blue-clr);
-}
+
 .nav_links li a {
     transition: all 0.3s ease 0s;
 }
-.nav_links li a:hover {
+
+a:focus,
+a:hover,
+a:active {
     color: var(--main-blue-clr);
 }
+
+
 
 .container {
     display: flex;
@@ -89,8 +89,6 @@ h1 {
     border-radius: 50px;
     background-color:var(--main-button-clr);
     border: 1px solid var(--main-blue-clr);
-    box-shadow: 2px 2px 1px var(--main-blue-clr);
-    
 }
 
 .button:hover {
@@ -103,9 +101,3 @@ h1 {
     /* min-width: 400px; */
 }
 
-#goodorfalse {
-    display: flex;
-    justify-content: center;
-    font-family: sans-serif;
-    font-size: 600;
-}
