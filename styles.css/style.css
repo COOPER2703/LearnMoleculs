@@ -101,3 +101,9 @@ h1 {
     /* min-width: 400px; */
 }
 
+/* TEMPORAIRE*/
+#tmp {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
