@@ -6,7 +6,7 @@
 }
 :root {
     --main-black-clr: rgb(42,48,58);
-    --main-blue-clr: hsl(209, 76%, 37%);
+    --main-blue-clr: #1fb3bf;
 }
 
 body {
@@ -112,19 +112,20 @@ h1 {
 
 section#contact {
     background: #f5f5f5f5;
-    padding: 100px;
+    padding: 100px 15px;
 }
 
 section#contact .container {
-    max-width: 1100px;
+    max-width: 800px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     background-color: white;
-    padding: 10px;
+    padding: 60px 10px;
     border-radius: 15px;
+    box-sizing: border-box;
     box-shadow: 0px 10px 50px -10px #f5f5f5f5;
 }
 
@@ -134,23 +135,23 @@ section#contact .container .title {
     margin-bottom: 50px;
 }
 section#contact .container .title h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: black;
 }
 
 section#contact .container .title h3 {
-    font-size: 2em;
+    font-size: 2.8em;
 }
 
 section#contact .container form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 section#contact .container form input {
-    width: 47%;
+    width: 45%;
 }
 
 section#contact .container form input,
@@ -163,22 +164,45 @@ section#contact .container form textarea {
     /* transition: 0.2s; */
 
 }
+section#contact .container form input:hover,
+section#contact .container form textarea:hover {
+    border-bottom: 2px solid #1fb3bf;
+    transition: 1s;
+}
+
 section#contact .container form textarea {
     width: 100%;
     resize: none;
     height: 100px;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
 }
 section#contact .container form button {
     width: 192px;
     height: 50px;
     border-radius: 20px;
     border: none;
-    background-color: #1761a6;
+    background-color: #1fb3bf;
     color: white;
     font-weight: bold;
     font-size: 1.2em;
     cursor: pointer;
     outline: none;
     margin: 0 auto;
+    transition: 0.2s;
+}
+
+section#contact .container form button:hover {
+    transform: translateY(-5px);
+    box-shadow: rgb(214 214 214) 0px 10px 50px -10px;
+}
+
+
+/*-- besoin de fix les media queries pour addapter
+        aux écrans téléphone la section contacte--*/
+@media screen and (max-widht:500px) {
+    section#contact .container{
+        background-color: red;
+        flex-direction: column;
+        width: 95%;
+    }
 }
