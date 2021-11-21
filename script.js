@@ -112,33 +112,15 @@ function repCounting(bool) {
 
 }
 
-const mandrill = require('node-mandrill')('<your API Key>'); 
 
-function sendEmail ( _name, _email, _subject, _message) {
-    mandrill('/messages/send', {
-        message: {
-            to: [{email: _email , name: _name}],
-            from_email: 'learnmoleculsimply@gmail.com',
-            subject: _subject,
-            text: _message
-        }
-    }, function(error, response){
-        if (error) console.log( error );
-        else console.log(response);
-    });
+function sendEmail() {
+    Email.send({
+        SecureToken : "29e05836-22fd-4302-aeab-81e246c282b2",
+        To : 'learnmoleculsimply@gmail.com',
+        From : document.getElementById('email').value,
+        Subject : document.getElementById('subject').value,
+        Body : document.getElementById('message').value
+    }).then(
+
+    );
 }
-
-// define your own email api which points to your server.
-
-app.post( '/api/sendemail/', function(req, res){
-            
-    let _name = req.body.name;
-    let _email = req.body.email;
-    let _subject = req.body.subject;
-    let _messsage = req.body.message;
-
-    //implement your spam protection or checks. 
-
-    sendEmail ( _name, _email, _subject, _message );
-
-});
