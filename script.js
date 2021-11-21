@@ -114,6 +114,7 @@ function repCounting(bool) {
 
 
 function sendEmail() {
+    console.log("Email send")
     Email.send({
         SecureToken : "29e05836-22fd-4302-aeab-81e246c282b2",
         To : 'learnmoleculsimply@gmail.com',
